@@ -1,4 +1,7 @@
 {% extends 'layout.html' %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
 {% block body %}
 <div class="row align-items-center d-flex  justify-content-center">
     <div class="col-12 mb-4">
@@ -8,7 +11,9 @@
                     <div class="col-lg-12 col-sm-16">
                       <h3 class="h3 text-center">GENERATE QUESTIONS & ANSWERS</h3>  
                     </div>
-                    <img src="{{ url_for('static', filename='question_undraw.png') }}" height="340px">
+                    <!-- <img src="{{ url_for('static', filename='question_undraw.png') }}" height="340px"> -->
+                    <img src="{{ url_for('static', filename='question_undraw.jpg') }}" height="340px">
+
                     <div class="card-body">
                               <form method="POST" action="test_generate">
                                 <div class="mb-4">

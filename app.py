@@ -6,9 +6,9 @@ app = Flask(__name__)
 
 app.secret_key= 'aica2'
 
-# import nltk
-# nltk.download("all")
-# exit()
+#import nltk
+#nltk.download('all')
+#exit()
 
 @app.route('/')
 def index():
@@ -16,6 +16,12 @@ def index():
 
 @app.route('/test_generate', methods=["POST"])
 def test_generate():
+	"""
+	The `test_generate` function processes form data to generate either objective or subjective test
+	questions and answers.
+	:return: The function `test_generate()` returns either a rendered template with the generated test
+	data for objective or subjective test types, or it redirects to the home page if an error occurs.
+	"""
 	if request.method == "POST":
 		inputText = request.form["itext"]
 		testType = request.form["test_type"]

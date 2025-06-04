@@ -1,0 +1,48 @@
+/* Nature-inspired earthy tones */
+:root {
+  --forest-green: #2e4d34;
+  --terracotta: #d2691e;
+  --warm-beige: #f5f0e6;
+  --sky-blue: #7ec0ee;
+  --sidebar-bg: #e7d3c1;
+}
+
+body {
+  background: var(--warm-beige);
+  color: var(--forest-green);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+header, .navbar {
+  background: var(--forest-green);
+  color: var(--warm-beige);
+}
+
+button, .btn {
+  background: var(--terracotta);
+  color: var(--warm-beige);
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+}
+
+button:hover, .btn:hover {
+  background: var(--sky-blue);
+  color: var(--forest-green);
+}
+
+.container, .content {
+  background: var(--sidebar-bg);
+  border-radius: 8px;
+  padding: 2em;
+  margin: 2em auto;
+  box-shadow: 0 2px 8px rgba(46, 77, 52, 0.08);
+}
+
+input, textarea, select {
+  border: 1px solid var(--forest-green);
+  background: var(--warm-beige);
+  color: var(--forest-green);
+  border-radius: 4px;
+  padding: 0.5em;
+}
