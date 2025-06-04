@@ -6,9 +6,9 @@ app = Flask(__name__)
 
 app.secret_key= 'aica2'
 
-#import nltk
-#nltk.download('all')
-#exit()
+import nltk
+nltk.download('all')
+exit()
 
 @app.route('/')
 def index():
