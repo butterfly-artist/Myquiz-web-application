@@ -7,8 +7,12 @@ app = Flask(__name__)
 app.secret_key= 'aica2'
 
 import nltk
-nltk.download('all')
-exit()
+
+# Download only if not already present
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
 
 @app.route('/')
 def index():
